@@ -9,7 +9,7 @@ let maxHeight = 2.30
 
 height = Float(maxHeight)
 
-print(str, height, terminator: "")
+print(str, height, terminator: "\n")
 
 let a = 5
 let b = 2
@@ -31,7 +31,27 @@ default:
     break
 }
 
-guard test > 0 else {
-    print("error")
-    fatalError()
+//guard test > 0 else {
+//    print("error")
+//    fatalError()
+//}
+
+
+let dico = ["France": "Paris", "UK": "London"]
+
+
+if let paris = dico["France"] {
+    print(paris)
+} else {
+    print("Je ne connais pas la capitale")
 }
+
+if let intValue = Int("42") {
+    print(intValue * 2)
+} else {
+    print("veuillez rentrer un nombre")
+}
+
+// nil coalescing operator
+// Optional<String> ?? String (default value)
+let capitaleFrance = dico["France"] ?? "Inconnu"
