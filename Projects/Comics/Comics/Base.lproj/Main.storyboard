@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="HD3-yM-1ku" kind="show" id="IuE-3F-qfU"/>
+                                    <segue destination="HD3-yM-1ku" kind="show" identifier="showDetails" id="IuE-3F-qfU"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="oKi-rs-hKn">
@@ -78,7 +78,7 @@
                     <navigationItem key="navigationItem" title="Comics List" id="zSg-9d-KJs">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0xi-3m-pSi">
                             <connections>
-                                <segue destination="QRG-Cb-Vgm" kind="popoverPresentation" popoverAnchorBarButtonItem="0xi-3m-pSi" id="mlR-fY-MYW">
+                                <segue destination="QRG-Cb-Vgm" kind="popoverPresentation" identifier="showForm" popoverAnchorBarButtonItem="0xi-3m-pSi" id="mlR-fY-MYW">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -327,13 +327,13 @@
                                                 <rect key="frame" x="0.0" y="1000" width="398" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW9-sh-5Nr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-SZ-lzO">
-                                                        <rect key="frame" x="47.5" y="0.0" width="352.5" height="31"/>
+                                                        <rect key="frame" x="39.5" y="0.0" width="360.5" height="31"/>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
@@ -403,10 +403,10 @@
             </objects>
             <point key="canvasLocation" x="2894" y="-735"/>
         </scene>
-        <!--View Controller-->
+        <!--Comic Details View Controller-->
         <scene sceneID="Dyd-Il-iRH">
             <objects>
-                <viewController id="HD3-yM-1ku" sceneMemberID="viewController">
+                <viewController id="HD3-yM-1ku" customClass="ComicDetailsViewController" customModule="Comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nDb-Qr-T3d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,6 +426,9 @@
                         <viewLayoutGuide key="safeArea" id="t00-1e-VXH"/>
                     </view>
                     <navigationItem key="navigationItem" id="P6P-SJ-lPL"/>
+                    <connections>
+                        <outlet property="comicName" destination="agL-t0-sEc" id="b4j-DL-TiS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK4-ve-djV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
