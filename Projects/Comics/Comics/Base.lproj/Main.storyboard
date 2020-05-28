@@ -393,6 +393,8 @@
                         <outlet property="editionTextField" destination="Wof-01-9FY" id="Pun-WQ-I1R"/>
                         <outlet property="isInSerieSwitch" destination="JeS-qX-izZ" id="nrd-i4-1iX"/>
                         <outlet property="numberOfPagesTextField" destination="tJe-Va-53w" id="BfW-yN-9OR"/>
+                        <outlet property="seriesNameTextField" destination="kZG-pQ-hW7" id="t4K-ZT-x1x"/>
+                        <outlet property="seriesNumberTextFIeld" destination="wcR-Nz-8kR" id="gOH-VM-A7u"/>
                         <outlet property="styleSegmentedControl" destination="UOz-ON-fOq" id="QUk-8T-aWt"/>
                         <outlet property="titleTextField" destination="kO9-J8-fCD" id="8PH-KV-fps"/>
                     </connections>

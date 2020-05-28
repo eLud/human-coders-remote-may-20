@@ -8,9 +8,10 @@
 
 import UIKit
 
+let library = Library()
+
 class ComicsTableViewController: UITableViewController {
 
-    let library = Library()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,15 @@ class ComicsTableViewController: UITableViewController {
         print("TableViewCOntroller loaded")
 
         tableView.dataSource = self
+
+        let comic = Comic(title: "Asterix", nbPage: 0, author: "frgr", illustrator: "", colorist: nil, serie: .standalone, style: .comic, language: "FR", editor: "", isbn: nil, summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: true, price: 0.0, note: nil)
+        library.add(comic: comic)
+
+        let notCenter = NotificationCenter.default
+        notCenter.addObserver(forName: Notification.Name("addedComic"), object: library, queue: OperationQueue.main) { (notif) in
+            self.tableView.reloadData()
+        }
+
     }
 
     // MARK: - Table view data source

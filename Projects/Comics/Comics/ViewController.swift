@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var editionTextField: UITextField!
     @IBOutlet weak var isInSerieSwitch: UISwitch!
+    @IBOutlet weak var seriesNameTextField: UITextField!
+    @IBOutlet weak var seriesNumberTextFIeld: UITextField!
     @IBOutlet weak var numberOfPagesTextField: UITextField!
     @IBOutlet weak var styleSegmentedControl: UISegmentedControl!
 
@@ -49,7 +51,19 @@ class ViewController: UIViewController {
 
         let isInSerie = isInSerieSwitch.isOn
 
-//        let newComic = Comic(title: title, nbPage: <#T##UInt#>, author: <#T##String#>, illustrator: <#T##String#>, colorist: <#T##Optional<String>#>, serie: <#T##Comic.Serie#>, style: <#T##Comic.Style#>, language: <#T##String#>, editor: <#T##String#>, isbn: <#T##String?#>, summary: <#T##String#>, coverImage: <#T##URL?#>, publicationDate: <#T##Date#>, edition: <#T##String#>, isRead: <#T##Bool#>, price: <#T##Double#>, note: <#T##Int?#>)
+        let serie: Comic.Serie
+        if isInSerie {
+            guard let seriesName = seriesNameTextField.text else { return }
+            guard let seriesNumberString = seriesNumberTextFIeld.text, let seriesNumber = Int(seriesNumberString) else { return }
+            serie = .serie(name: seriesName, number: seriesNumber)
+        } else {
+            serie = .standalone
+        }
+
+        let newComic = Comic(title: title, nbPage: nbPageInt, author: "Ludovic", illustrator: "Ludovic", colorist: nil, serie: serie, style: .comic, language: "", editor: "", isbn: "", summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: false, price: 0, note: nil)
+        library.add(comic: newComic)
+
+        dismiss(animated: true, completion: nil)
     }
 }
 

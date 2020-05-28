@@ -18,6 +18,9 @@ class Library {
 
     func add(comic: Comic) {
         comics.append(comic)
+
+        let notCenter = NotificationCenter.default
+        notCenter.post(name: Notification.Name("addedComic"), object: self)
     }
 
     func remove(comic: Comic) {
