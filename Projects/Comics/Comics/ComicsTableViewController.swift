@@ -64,9 +64,8 @@ class ComicsTableViewController: UITableViewController {
 
         if segue.identifier == "showDetails" {
             let destination = segue.destination as? ComicDetailsViewController
-
-            guard let cell = sender as? UITableViewCell else { return }
-            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            guard let cell = sender as? UITableViewCell else { fatalError() }
+            guard let indexPath = tableView.indexPath(for: cell) else { fatalError() }
 
             destination?.comic = library.allComics[indexPath.row]
         }

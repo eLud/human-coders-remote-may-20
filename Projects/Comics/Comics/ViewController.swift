@@ -60,7 +60,10 @@ class ViewController: UIViewController {
             serie = .standalone
         }
 
-        let newComic = Comic(title: title, nbPage: nbPageInt, author: "Ludovic", illustrator: "Ludovic", colorist: nil, serie: serie, style: .comic, language: "", editor: "", isbn: "", summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: false, price: 0, note: nil)
+        let index = styleSegmentedControl.selectedSegmentIndex
+        guard let style = Comic.Style(segmentedControlIndex: index) else { fatalError("Something wrong in segmented control indexes") }
+
+        let newComic = Comic(title: title, nbPage: nbPageInt, author: "Ludovic", illustrator: "Ludovic", colorist: nil, serie: serie, style: style, language: "", editor: "", isbn: "", summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: false, price: 0, note: nil)
         library.add(comic: newComic)
 
         dismiss(animated: true, completion: nil)

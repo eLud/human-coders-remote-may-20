@@ -11,10 +11,23 @@ import Foundation
 struct Comic {
 
     //Enum with raw values
-    enum Style: String, CaseIterable {
+    enum Style: String, CaseIterable, Codable {
         case manga
         case comic
         case french = "franco belge"
+
+        init?(segmentedControlIndex: Int) {
+            switch segmentedControlIndex {
+            case 0:
+                self = .manga
+            case 1:
+                self = .comic
+            case 2:
+                self = .french
+            default:
+                return nil
+            }
+        }
     }
 
     //Enum with associated value
