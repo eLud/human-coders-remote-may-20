@@ -8,17 +8,19 @@
 
 import Foundation
 
-struct Comic {
+struct Comic: Hashable, Identifiable {
+
+    let id: UUID = UUID()
 
     //Enum with raw values
-    enum Style: String, CaseIterable {
+    enum Style: String, CaseIterable, Hashable {
         case manga
         case comic
         case french = "franco belge"
     }
 
     //Enum with associated value
-    enum Serie {
+    enum Serie: Hashable {
         case standalone
         case serie(name: String, number: Int)
 

@@ -10,7 +10,7 @@ import Foundation
 
 class Library {
 
-    private(set) var comics: [Comic] = []
+    private(set) var comics: [Comic] = [Comic(title: "Test", nbPage: 0, author: "", illustrator: "", colorist: nil, serie: .standalone, style: .comic, language: "", editor: "", isbn: "", summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: false, price: 0, note: nil)]
 
     var allComics: [Comic] {
         return comics
