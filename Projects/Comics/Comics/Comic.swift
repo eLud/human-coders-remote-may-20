@@ -11,7 +11,7 @@ import Foundation
 struct Comic {
 
     //Enum with raw values
-    enum Style: String {
+    enum Style: String, CaseIterable {
         case manga
         case comic
         case french = "franco belge"
