@@ -11,7 +11,7 @@
         <!--Comics List-->
         <scene sceneID="tWa-sJ-19d">
             <objects>
-                <tableViewController id="ZIx-bl-EoH" sceneMemberID="viewController">
+                <tableViewController id="ZIx-bl-EoH" customClass="ComicsTableViewController" customModule="Comics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="E5L-XQ-xNd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
