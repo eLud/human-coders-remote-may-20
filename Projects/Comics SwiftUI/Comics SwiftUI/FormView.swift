@@ -21,7 +21,9 @@ struct FormView: View {
     @State private var seriesName = ""
     @State private var style: Comic.Style = .comic
     @State private var date = Date()
-    
+
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         Form {
             Section {
@@ -77,6 +79,8 @@ struct FormView: View {
                     let comic = Comic(title: self.title, nbPage: UInt(self.numberOfPages), author: self.author, illustrator: self.illustrator, colorist: self.colorist, serie: serie, style: self.style, language: "", editor: "", isbn: "", summary: "", coverImage: nil, publicationDate: Date(), edition: "", isRead: true, price: 0, note: nil)
 
                     library.add(comic: comic)
+
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }
         }
