@@ -16,12 +16,20 @@
 		330FB837247D46FA004F576B /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FB836247D46FA004F576B /* Comic.swift */; };
 		330FB839247D471D004F576B /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330FB838247D471D004F576B /* Library.swift */; };
 		3383CDA2248144830033E382 /* ComicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383CDA1248144830033E382 /* ComicsTests.swift */; };
+		3383CDB0248148F00033E382 /* ComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383CDAF248148F00033E382 /* ComicsUITests.swift */; };
 		33B1EC36247FA18A00BC8341 /* ComicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1EC35247FA18A00BC8341 /* ComicsTableViewController.swift */; };
 		33B1EC39247FC1CF00BC8341 /* ComicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1EC38247FC1CF00BC8341 /* ComicDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3383CDA4248144830033E382 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 330FB817247D2241004F576B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 330FB81E247D2241004F576B;
+			remoteInfo = Comics;
+		};
+		3383CDB2248148F00033E382 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 330FB817247D2241004F576B /* Project object */;
 			proxyType = 1;
@@ -44,6 +52,9 @@
 		3383CD9F248144830033E382 /* ComicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3383CDA1248144830033E382 /* ComicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTests.swift; sourceTree = "<group>"; };
 		3383CDA3248144830033E382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3383CDAD248148F00033E382 /* ComicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3383CDAF248148F00033E382 /* ComicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsUITests.swift; sourceTree = "<group>"; };
+		3383CDB1248148F00033E382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33B1EC35247FA18A00BC8341 /* ComicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTableViewController.swift; sourceTree = "<group>"; };
 		33B1EC38247FC1CF00BC8341 /* ComicDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -63,6 +74,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3383CDAA248148F00033E382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +89,7 @@
 			children = (
 				330FB821247D2241004F576B /* Comics */,
 				3383CDA0248144830033E382 /* ComicsTests */,
+				3383CDAE248148F00033E382 /* ComicsUITests */,
 				330FB820247D2241004F576B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +99,7 @@
 			children = (
 				330FB81F247D2241004F576B /* Comics.app */,
 				3383CD9F248144830033E382 /* ComicsTests.xctest */,
+				3383CDAD248148F00033E382 /* ComicsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +128,15 @@
 				3383CDA3248144830033E382 /* Info.plist */,
 			);
 			path = ComicsTests;
+			sourceTree = "<group>";
+		};
+		3383CDAE248148F00033E382 /* ComicsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3383CDAF248148F00033E382 /* ComicsUITests.swift */,
+				3383CDB1248148F00033E382 /* Info.plist */,
+			);
+			path = ComicsUITests;
 			sourceTree = "<group>";
 		};
 		33B1EC37247FA1F000BC8341 /* Models */ = {
@@ -157,6 +186,24 @@
 			productReference = 3383CD9F248144830033E382 /* ComicsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3383CDAC248148F00033E382 /* ComicsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3383CDB4248148F00033E382 /* Build configuration list for PBXNativeTarget "ComicsUITests" */;
+			buildPhases = (
+				3383CDA9248148F00033E382 /* Sources */,
+				3383CDAA248148F00033E382 /* Frameworks */,
+				3383CDAB248148F00033E382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3383CDB3248148F00033E382 /* PBXTargetDependency */,
+			);
+			name = ComicsUITests;
+			productName = ComicsUITests;
+			productReference = 3383CDAD248148F00033E382 /* ComicsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +218,10 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					3383CD9E248144830033E382 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 330FB81E247D2241004F576B;
+					};
+					3383CDAC248148F00033E382 = {
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = 330FB81E247D2241004F576B;
 					};
@@ -191,6 +242,7 @@
 			targets = (
 				330FB81E247D2241004F576B /* Comics */,
 				3383CD9E248144830033E382 /* ComicsTests */,
+				3383CDAC248148F00033E382 /* ComicsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +259,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3383CD9D248144830033E382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3383CDAB248148F00033E382 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +297,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3383CDA9248148F00033E382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383CDB0248148F00033E382 /* ComicsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -245,6 +312,11 @@
 			isa = PBXTargetDependency;
 			target = 330FB81E247D2241004F576B /* Comics */;
 			targetProxy = 3383CDA4248144830033E382 /* PBXContainerItemProxy */;
+		};
+		3383CDB3248148F00033E382 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 330FB81E247D2241004F576B /* Comics */;
+			targetProxy = 3383CDB2248148F00033E382 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -460,6 +532,44 @@
 			};
 			name = Release;
 		};
+		3383CDB5248148F00033E382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = ComicsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.humancoders.may20.ComicsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Comics;
+			};
+			name = Debug;
+		};
+		3383CDB6248148F00033E382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = ComicsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.tectec.humancoders.may20.ComicsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Comics;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +596,15 @@
 			buildConfigurations = (
 				3383CDA6248144830033E382 /* Debug */,
 				3383CDA7248144830033E382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3383CDB4248148F00033E382 /* Build configuration list for PBXNativeTarget "ComicsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3383CDB5248148F00033E382 /* Debug */,
+				3383CDB6248148F00033E382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
