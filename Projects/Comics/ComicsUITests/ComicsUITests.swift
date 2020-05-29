@@ -29,7 +29,6 @@ class ComicsUITests: XCTestCase {
         app.launch()
 
         app.navigationBars["Comics List"].buttons["Add"].tap()
-
         let scrollViewsQuery = app.scrollViews
         let element = scrollViewsQuery.children(matching: .other).element(boundBy: 0)
         element.children(matching: .other).element(boundBy: 0).children(matching: .textField).element.tap()
