@@ -18,6 +18,7 @@ class Library {
 
     func add(comic: Comic) {
         comics.append(comic)
+        save()
     }
 
     func remove(comic: Comic) {
@@ -30,5 +31,33 @@ class Library {
         }
 
 //        comics.removeFirst(comic)
+    }
+
+    func save() {
+
+        let jsonEncoder = JSONEncoder()
+        let plistEncoder = PropertyListEncoder()
+        plistEncoder.outputFormat = .xml
+
+        do {
+            let jdata = try jsonEncoder.encode(["Toto", "Titi"])
+            let pdata = try plistEncoder.encode(["Toto", "Titi"])
+            print(String(data: jdata, encoding: .utf8)!)
+            print(String(data: pdata, encoding: .utf8)!)
+
+
+            let jsonDecoder = JSONDecoder()
+            do {
+                let array = try jsonDecoder.decode([Int].self, from: jdata)
+                print(array)
+            } catch {
+                print(error)
+            }
+
+        } catch {
+            print(error)
+        }
+
+
     }
 }

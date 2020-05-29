@@ -13,7 +13,7 @@ struct Comic: Hashable, Identifiable {
     let id: UUID = UUID()
 
     //Enum with raw values
-    enum Style: String, CaseIterable, Hashable {
+    enum Style: String, CaseIterable, Hashable, Codable {
         case manga
         case comic
         case french = "franco belge"
@@ -21,6 +21,7 @@ struct Comic: Hashable, Identifiable {
 
     //Enum with associated value
     enum Serie: Hashable {
+
         case standalone
         case serie(name: String, number: Int)
 
