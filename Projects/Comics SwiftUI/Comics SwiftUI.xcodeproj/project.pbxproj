@@ -35,6 +35,7 @@
 		3383CD54248001F40033E382 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		3383CD56248002BE0033E382 /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
 		3383CD5824800B580033E382 /* ComicDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsView.swift; sourceTree = "<group>"; };
+		3383CD5A24800D210033E382 /* Comics SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Comics SwiftUI.entitlements"; sourceTree = "<group>"; };
 		33B1EC33247E985000BC8341 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +69,7 @@
 		330FB845247E7549004F576B /* Comics SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3383CD5A24800D210033E382 /* Comics SwiftUI.entitlements */,
 				3382855D247E76FC008B03F7 /* Comic.swift */,
 				33B1EC33247E985000BC8341 /* Library.swift */,
 				330FB846247E7549004F576B /* AppDelegate.swift */,
@@ -308,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Comics SwiftUI/Comics SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Comics SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
@@ -319,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.tectec.humancoders.may20.Comics-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Comics SwiftUI/Comics SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Comics SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
@@ -339,6 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.tectec.humancoders.may20.Comics-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
