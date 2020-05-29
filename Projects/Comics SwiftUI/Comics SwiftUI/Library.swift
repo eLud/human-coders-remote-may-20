@@ -45,6 +45,9 @@ class Library {
             print(String(data: jdata, encoding: .utf8)!)
             print(String(data: pdata, encoding: .utf8)!)
 
+            saveToDisk(data: jdata)
+
+            readFromDisk()
 
             let jsonDecoder = JSONDecoder()
             do {
@@ -59,5 +62,37 @@ class Library {
         }
 
 
+    }
+
+    func saveToDisk(data: Data) {
+
+        let fm = FileManager.default
+        guard let baseURL = fm.urls(for: .documentDirectory, in:.userDomainMask).first else { return }
+        let fullURL = baseURL.appendingPathComponent("myFile.json")
+
+        do {
+            try data.write(to: fullURL)
+        } catch {
+            print(error)
+        }
+    }
+
+    func readFromDisk() -> Data? {
+
+        let fm = FileManager.default
+        guard let baseURL = fm.urls(for: .documentDirectory, in:.userDomainMask).first else { return nil }
+        let fullURL = baseURL.appendingPathComponent("myFile.json")
+
+        let path = fullURL.path
+        if fm.fileExists(atPath: path) {
+
+            do {
+                let data = try Data(contentsOf: fullURL)
+                return data
+            } catch {
+                print(error)
+            }
+        }
+       return nil
     }
 }
