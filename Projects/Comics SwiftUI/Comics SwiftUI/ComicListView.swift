@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ComicListView: View {
 
+    @State private var presentForm = false
+
     var body: some View {
         List(library.allComics) { comic in
             NavigationLink(destination: ComicDetailsView(comic: comic)) {
@@ -24,10 +26,13 @@ struct ComicListView: View {
         .listStyle(GroupedListStyle())
         .navigationBarTitle("Comics List")
         .navigationBarItems(trailing: Button(action: {
-
+            self.presentForm.toggle()
         }, label: {
             Image(systemName: "plus")
         }))
+            .sheet(isPresented: $presentForm) {
+                FormView()
+        }
     }
 }
 
