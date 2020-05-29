@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Comic" representedClassName="Comic" syncable="YES" codeGenerationType="class">
+        <attribute name="pages" attributeType="Integer 16" defaultValueString="48" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="writtenComics" inverseEntity="Person"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <relationship name="writtenComics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comic" inverseName="author" inverseEntity="Comic"/>
+    </entity>
+    <elements>
+        <element name="Comic" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Person" positionX="211.22265625" positionY="-59.8828125" width="128" height="88"/>
+    </elements>
+</model>
